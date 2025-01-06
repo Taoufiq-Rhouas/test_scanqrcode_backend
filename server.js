@@ -115,6 +115,12 @@ io.on('connection', (socket) => {
 
 
 // S_TEST_CONNECTION_BACKEND
+// Root route to check if the server is running
+app.get('/', (req, res) => {
+    console.log('== Server is running and ready! ==');
+    res.send('Server is running and ready!');
+});
+
 app.post('/api/test', (req, res) => {
     console.log('==== START ====');
     console.log("req.body:");
